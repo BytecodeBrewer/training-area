@@ -1,54 +1,104 @@
-# Introduction to Repository Management
+# GitHub Governance Lab
 
-_Learn the basics of several GitHub features that can help support a collaborative, friendly, and healthy project._
+A practical self-study project focused on GitHub security, automation, dependency management, and collaborative repository governance.
 
-## Welcome
+The repository uses a small FastAPI and MongoDB application as a realistic codebase for configuring and testing GitHub workflows, CodeQL, Dependabot, CODEOWNERS, security policies, and contribution processes.
 
-- **Who is this for**: Developers with the need to start collaborating.
-- **What you'll learn**: The different ways to protect your repository's content as more people join as collaborators.
-- **What you'll build**: You will prepare Mergington High School's extracurricular activities website repository so additional teachers can safely collaborate.
-- **Prerequisites**:
-  - Skills exercise: [Introduction to GitHub](https://github.com/skills/introduction-to-github)
-  - Skills exercise: [Communicate using Markdown](https://github.com/skills/communicate-using-markdown)
-  - Skills exercise: [Review pull requests](https://github.com/skills/review-pull-requests)
-- **How long**: This exercise takes less than one hour to complete.
+## What I implemented
 
-In this exercise, you will:
+- GitHub Actions workflows
+- CodeQL code scanning
+- Dependabot dependency updates
+- CODEOWNERS configuration
+- Security policies
+- Contribution guidelines
+- Code of Conduct setup
+- Pull request and review workflows
+- Repository organization and collaboration practices
 
-1. Add a simple rulesets and configuration to restrict repository content.
-1. Communicate procedures to help guide collaborators.
-1. Assign responsibility of parts of the code to particular collaborators.
-1. Learn the difference between collaboration in a personal repository and organization repository.
-1. Establish ground rules to promote a health collaboration environment.
-1. Establish a process for managing security updates.
+## Practice application
 
-> [!IMPORTANT]
-> This exercise is meant to provide an overview of many GitHub features.
-> It will provide references to learn more but not a detailed explanation for any specific subject.
+The repository contains a small FastAPI application backed by MongoDB and a lightweight frontend.
 
-### How to start this exercise
+The application provides a realistic codebase for experimenting with repository security, automation, dependency management, and collaborative development workflows.
 
-Simply copy the exercise to your account, then give your favorite Octocat (Mona) **about 20 seconds** to prepare the first lesson, then **refresh the page**.
+## Technology stack
 
-[![](https://img.shields.io/badge/Copy%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=skills&template_name=introduction-to-repository-management&owner=%40me&name=skills-introduction-to-repository-management&description=Exercise:+introduction+to+repository+management&visibility=public)
+- Python
+- FastAPI
+- MongoDB
+- JavaScript
+- HTML
+- CSS
+- GitHub Actions
+- CodeQL
+- Dependabot
 
-<details>
-<summary>Having trouble? 🤷</summary><br/>
+## Project structure
 
-When copying the exercise, we recommend the following settings:
+```text
+.
+├── src/
+│   ├── app.py
+│   ├── backend/
+│   │   ├── database.py
+│   │   └── routers/
+│   └── static/
+├── .github/
+│   └── workflows/
+├── CODEOWNERS
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+├── SECURITY.md
+├── requirements.txt
+└── README.md
+```
 
-- For owner, choose your personal account or an organization to host the repository.
+## Running the sample application
 
-- We recommend creating a public repository, since private repositories will use Actions minutes.
+### Requirements
 
-If the exercise isn't ready in 20 seconds, please check the [Actions](../../actions) tab.
+- Python 3.8 or newer
+- MongoDB
+- Git
 
-- Check to see if a job is running. Sometimes it simply takes a bit longer.
+### Installation
 
-- If the page shows a failed job, please submit an issue. Nice, you found a bug! 🐛
+```bash
+git clone https://github.com/BytecodeBrewer/github-governance-lab.git
+cd github-governance-lab
+pip install -r requirements.txt
+```
 
-</details>
+### Start the application
 
----
+```bash
+python -m uvicorn src.app:app --reload
+```
 
-&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+The application is then available at:
+
+- Frontend: `http://localhost:8000`
+- API documentation: `http://localhost:8000/docs`
+- Alternative API documentation: `http://localhost:8000/redoc`
+
+## Repository features
+
+### CodeQL
+
+CodeQL is configured to scan the Python and JavaScript code for security issues through GitHub Actions.
+
+### Dependabot
+
+Dependabot is configured to create automated pull requests for dependency updates.
+
+### Repository governance
+
+The repository includes:
+
+- `CODEOWNERS`
+- `CONTRIBUTING.md`
+- `CODE_OF_CONDUCT.md`
+- `SECURITY.md`
+
+These files define ownership, contribution expectations, conduct rules, and security reporting processes for the repository.
